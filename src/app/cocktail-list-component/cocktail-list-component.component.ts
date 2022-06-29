@@ -7,13 +7,13 @@ import { CocktailService } from '../cocktail.service';
   styleUrls: ['./cocktail-list-component.component.scss']
 })
 export class CocktailListComponentComponent implements OnInit {
-  cocktailsList:CocktailService[] = []
+  cocktails:any = [];
 
   constructor(private cocktailsService: CocktailService) { }
 
   ngOnInit(): void {
-    this.cocktailsList = this.cocktailsService.getCocktails();
-    console.log(this.cocktailsList)
+    this.cocktails =this.cocktailsService.getCocktails()
+    console.log(this.cocktails)
   }
 
 }
